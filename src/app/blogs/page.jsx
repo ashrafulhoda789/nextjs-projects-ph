@@ -43,15 +43,17 @@ const BlogsPage = () => {
     ]
 
     return (
-        <div>
+        <div className="w-11/12 mx-auto ">
             <h2 className="text-3xl font-bold-mb-4">Blogs</h2>
 
-            {
-                blogs.map(blog => <div key={blog.id}>
-                    <h3 className="text-4xl font-bold mb-2">{blog.title}</h3>
-                    <Link href='/'>Show Details</Link>
-                </div>)
-            }
+            <div className="grid grid-cols-3 gap-10">
+                {
+                    blogs.map(blog => <div key={blog.id}>
+                        <h3 className="text-4xl font-bold mb-2">{blog.title}</h3>
+                        <Link href={`/blogs/${blog.id}`}>Show Details</Link>
+                    </div>)
+                }
+            </div>
         </div>
     );
 };
