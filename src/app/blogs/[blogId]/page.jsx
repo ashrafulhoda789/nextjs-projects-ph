@@ -42,7 +42,7 @@ const BlogDetailPage = async ({ params }) => {
 
     const { blogId } = await params;
     const blog = blogs.find(blog => blog.id == blogId);
-    console.log(blog, 'blog info');
+    // console.log(blog, 'blog info');
 
 
     return (
